@@ -1,0 +1,89 @@
+﻿{
+	"languageTag": "en-US",
+	"fileDescription": "Strings for advancedLog",
+	"text": {
+		"plugins": {
+			"wackytoaster_advancedlog": {
+				"name": "log",
+				"description": "Plugin with more features for console logs.",
+				"help-url": "https://www.construct.net",
+				"properties": {
+					"logging-active": {
+						"name": "Logging active",
+						"desc": "If logging is activated or deactivated"
+					}
+				},
+				"aceCategories": {
+					"custom": "Custom"
+				},
+				"conditions": {
+				},
+				"actions": {
+					"set-logtype": {
+						"list-name": "New log type",
+						"display-text": "Add new log-type {0}, style {1}, icon {2}",
+						"description": "Create a new log type",
+						"params": {
+							"type": {
+								"name": "Type",
+								"desc": "Pick a unique name for the type of log"
+							},
+							"css": {
+								"name": "CSS",
+								"desc": "Apply CSS styling to the log"
+							},
+							"icon": {
+								"name": "icon",
+								"desc": "Add an icon to the log. Can either be a string or an emoji"
+							}
+						}
+					},
+					"log": {
+						"list-name": "Log",
+						"display-text": "Log {0}, with type {1}, force log {2}",
+						"description": "Log into the console",
+						"params": {
+							"log": {
+								"name": "Log",
+								"desc": "The text you want to log"
+							},
+							"type": {
+								"name": "type",
+								"desc": "The type of log you want to create"
+							},
+							"forceLog": {
+								"name": "force",
+								"desc": "forces to log into the console, even when logging is disabled",
+								"items": {
+									"true": "true",
+									"false": "false"
+								}
+							}
+						}
+					},
+					"set-active": {
+						"list-name": "Set Active",
+						"display-text": "Set active to {0}",
+						"description": "Enable/Disable logging",
+						"params": {
+							"set": {
+								"name": "Set active",
+								"desc": "Enable/Disable logging",
+								"items": {
+									"true": "true",
+									"false": "false"
+								}
+							}
+						}
+					}
+				},
+				"expressions": {
+					"isActive": {
+						"description": "Return 1 if active, 0 if inactive",
+						"translated-name": "isActive"
+					}
+				}
+			}
+		}
+	}
+}

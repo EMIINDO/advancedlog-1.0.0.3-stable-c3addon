@@ -1,0 +1,55 @@
+﻿{
+	"custom": {
+		"conditions": [
+		],
+		"actions": [
+			{
+				"id": "log",
+				"scriptName": "doLog",
+				"highlight": true,
+				"params": [
+					{"id": "log", "type": "any"},
+					{"id": "type", "type": "string"},
+					{"id": "forceLog", "type": "combo",
+						"items": [
+									"false",
+									"true"
+								]
+					}
+				]
+			},
+			{
+				"id": "set-logtype",
+				"scriptName": "setLogType",
+				"highlight": false,
+				"params": [
+					{"id": "type", "type": "string"},
+					{"id": "css", "type": "string"},
+					{"id": "icon", "type": "string"}
+				]
+			},
+			{
+				"id": "set-active",
+				"scriptName": "setActive",
+				"highlight": false,
+				"params": [
+					{"id": "set", "type": "combo",
+						"items": [
+									"false",
+									"true"
+								]
+					}
+				]
+			}
+		],
+		"expressions": [
+			{
+				"c2id": 0,
+				"id": "isActive",
+				"expressionName": "isActive",
+				"highlight": false,
+				"returnType": "number"
+			}
+		]
+	}
+}
